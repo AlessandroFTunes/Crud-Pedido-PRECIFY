@@ -25,29 +25,22 @@ main {
 
 }
 .navbar {
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: auto auto;
-  gap: 10px;
+
   padding: 10px;
 }
-.pesquisa {
-  grid-column: 1; /* Primeira coluna */
-  grid-row: 1;
-  position:relative;
-  top:-20px;
-  left: 30%;
-}
+
 .navbar-brand img{
   width: 8rem;
   height: auto;
 
 }
 .collapse{
-    grid-column: 1; /* Primeira coluna */
+  grid-column: 1; /* Primeira coluna */
   grid-row: 2;
   position: relative;
-  top: 40px;
-  background-color: #039D55;
+  top: 5px;
+  left:80px;
+  
 }
 .Precify {
     width: 1000px;
@@ -59,7 +52,10 @@ main {
     top:-100px;
     filter: blur(8px); /* Aplica o desfoque */
 }
-
+.logo {
+  width: 100px;
+  height:auto;
+}
 .form-select {
   grid-column: 1; /* Primeira coluna */
   grid-row: 1; /* Primeira linha */
