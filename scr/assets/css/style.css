@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding:0;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background: radial-gradient(
+    circle,
+    #87C85E 30%,
+    #039D55 100%
+  );
+
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  top:100px;
+
+}
+
+.Precify {
+    width: 1000px;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3; /* valor de 0 (invisível) a 1 (opaco) */
+    left: 400px;
+    top:-100px;
+    filter: blur(8px); /* Aplica o desfoque */
+}
+
+.form-select {
+  grid-column: 1; /* Primeira coluna */
+  grid-row: 1; /* Primeira linha */
+  font-size: 30px;
+  position: relative;
+  top: 10rem;
+  left:15rem;
+}
+
+.input-group {
+  grid-column: 1; /* Primeira coluna */
+  grid-row: 2; /* Segunda linha */
+    position: relative;
+    top: -12rem;
+    left:15rem;
+}
+
+
+.peso-disponivel { /*banco de horas*/
+  grid-column: 1; /* Segunda coluna */
+  grid-row: 3; /* Primeira linha */
+    position: relative;
+    top: -13.8rem;
+    left:15rem;
+}
+.card{
+    grid-column: 3; /* Segunda coluna */
+  grid-row: 1; /* Primeira linha */
+  position: relative;
+  right: 15rem;
+  top: -2rem;
+}
