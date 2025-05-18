@@ -292,7 +292,8 @@
                 valor = materialData[material].valor * kg;
                 materialName = select.options[select.selectedIndex].text;
             }
-            
+            console.log (material +" este e o material");
+            console.log (valor +" este e o valor");
             // Atualizar interface
             document.getElementById("titulo_material").textContent = materialName;
             document.getElementById("texto_material").textContent = materialData[material].texto;
