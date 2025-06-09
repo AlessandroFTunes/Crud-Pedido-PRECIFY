@@ -111,6 +111,7 @@
             <thead class="table-success">
                 <tr>
                     <th scope="col" class="text-center">ID</th>
+                    <th scope="col" class="text-center">Nome</th>
                     <th scope="col">Tipo</th>
                     <th scope="col">Preço por KG</th>
                     <th scope="col">Peso</th>
@@ -128,7 +129,7 @@
 <!-- formulário de envio  -->            
             <div class="card mt-4 border-success">
                 <div class="card-header bg-light">
-                    <h6 class="mb-0"><i class="bi bi-plus-circle me-2"></i>Adicionar Novo Material</h6>
+                    <h6 class="mb-0"><i class="bi bi-plus-circle me-2" ></i>Adicionar Novo Material</h6>
                 </div>
                 <div class="card-body">
 <form>
@@ -136,7 +137,7 @@
         <!-- Nome do Material -->
         <div class="col-md-4">
             <label for="material" class="form-label">Nome do material</label>
-            <input type="text" class="form-control" id="material" placeholder="Ex: Garrafa de Vidro">
+            <input type="text" class="form-control" id="nome" placeholder="Ex: Garrafa de Vidro">
         </div>
 
         <!-- Tipo -->
@@ -166,6 +167,13 @@
             <label for="peso" class="form-label">Peso (KG)</label>
             <input type="number" step="0.01" class="form-control" id="peso" placeholder="0,00">
         </div>
+
+        <!-- localidade -->
+        <div class="col-md-3">
+            <label for="localidade" class="form-label">Localidade</label>
+            <input type="text" class="form-control" id="localidade" placeholder="Ex: Belo Horizonte">
+        </div>
+
 
         <!-- Botão -->
         <div class="col-md-2 d-flex align-items-end">

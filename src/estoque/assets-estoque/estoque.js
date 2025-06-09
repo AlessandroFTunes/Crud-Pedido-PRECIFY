@@ -1,3 +1,7 @@
+let modoEdicao = false;
+let idAtual = null;
+
+
 function atualizar() {
     fetch("http://localhost:3000/materiais")
         .then(response => response.json())
@@ -6,7 +10,9 @@ function atualizar() {
             for (let material of json) {
                 html += `
                     <tr>
+                    
                         <th scope='row' class='text-center'>${material.id}</th>
+                        <th scope='row' class='text-center'>${material.nome}</th>
                         <td>${material.tipo}</td>
                         <td class='text-end'>R$ ${material.preco.toFixed(2)}</td>
                         <td>${material.peso} kg</td>
@@ -18,7 +24,39 @@ function atualizar() {
                     </tr>
                 `;
             }
+
+            // Atualiza o HTML da tabela
             document.getElementById("livros_db").innerHTML = html;
+
+            // Agora que os botões existem no DOM, adiciona os eventos
+            for (let material of json) {
+                // Botão Excluir
+                document.getElementById(`excluir-${material.id}`).addEventListener("click", () => {
+                    if (confirm("Tem certeza que deseja excluir este material?")) {
+                        fetch(`http://localhost:3000/materiais/${material.id}`, {
+                            method: "DELETE"
+                        })
+                        .then(() => atualizar())
+                        .catch(error => console.error("Erro ao excluir:", error));
+                    }
+                });
+
+                // Botão Editar
+                document.getElementById(`editar-${material.id}`).addEventListener("click", () => {
+                    document.getElementById("tipo").value = material.tipo;
+                    document.getElementById("preco").value = material.preco;
+                    document.getElementById("peso").value = material.peso;
+                    document.getElementById("localidade").value = material.localidade || "";
+
+                    modoEdicao = true;
+                    idAtual = material.id;
+
+                    const btn = document.getElementById("btnClicar");
+                    btn.textContent = "Atualizar";
+                    btn.classList.remove("btn-success");
+                    btn.classList.add("btn-primary");
+                });
+            }
         })
         .catch(error => console.error('Erro ao buscar materiais:', error));
 }
@@ -30,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (button) {
         button.addEventListener("click", function () {
             const materiais = {
+                nome: document.getElementById("nome").value,
                 tipo: document.getElementById("tipo").value,
                 preco: parseFloat(document.getElementById("preco").value),
                 peso: parseFloat(document.getElementById("peso").value),
@@ -63,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => response.json())
             .then(material => {
                 if (material) {
+                    document.getElementById("nome").innerText = material.nome;
                     document.getElementById("tipo").innerText = material.tipo;
                     document.getElementById("preco").innerText = "R$ " + material.preco.toFixed(2);
                     document.getElementById("peso").innerText = material.peso + " kg";

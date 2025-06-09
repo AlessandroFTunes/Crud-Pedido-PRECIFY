@@ -4,10 +4,7 @@
   "description": "Aqui devem ficar os arquivos-fonte do projeto: HTML, CSS, Javascript, imagens, e outros necessários para o  funcionamento do sistema.",
   "main": "index.js",
   "scripts": {
-      "start": "json-server --watch src/db/bd.json --port 3000"
-
-
-
+    "start": "json-server --watch src/db/bd.json --port 3000"
   },
   "keywords": [],
   "author": "",

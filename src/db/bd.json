@@ -1,53 +1,65 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Cliente Exemplo",
       "email": "cliente@email.com",
       "tipo": "cliente"
     }
   ],
-  
   "materiais": [
     {
-      "id": 1,
+      "id": "1",
+      "nome": "aa",
       "tipo": "papel",
-      "preco": 0.80,
+      "preco": 0.8,
       "peso": 120,
       "localidade": "Centro de Triagem A"
     },
     {
-      "id": 2,
+      "id": "2",
+      "nome": "aa",
       "tipo": "plastico",
-      "preco": 1.50,
+      "preco": 1.5,
       "peso": 75,
       "localidade": "Galpao Zona Norte"
     },
     {
-      "id": 3,
+      "id": "3",
+      "nome": "aa",
       "tipo": "vidro",
-      "preco": 0.30,
+      "preco": 0.3,
       "peso": 200,
       "localidade": "Bairro Sao Joao"
     },
     {
-      "id": 4,
+      "id": "4",
+      "nome": "aa",
       "tipo": "metal",
-      "preco": 4.20,
+      "preco": 4.2,
       "peso": 50,
       "localidade": "Galpao Central"
     },
     {
-      "id": 5,
+      "id": "5",
+      "nome": "aa",
       "tipo": "eletronicos",
-      "preco": 6.00,
+      "preco": 6,
       "peso": 30,
       "localidade": "Ponto de Coleta Eletronica"
+    },
+    {
+      "id": "2aec",
+      "nome": "aa",
+      "tipo": "Plástico",
+      "preco": 2,
+      "peso": 2,
+      "localidade": "aa"
     }
   ],
   "empresas": [
     {
-      "id": 1,
+      "id": "1",
       "nome_empresa": "EcoRecicla LTDA",
       "cnpj": "12.345.678/0001-90",
       "endereco": "Rua Verde, 100 - Belo Horizonte, MG",
@@ -57,13 +69,13 @@
   ],
   "pagamentos": [
     {
-      "id": 1,
+      "id": "1",
       "id_transacao": "20250427-001",
       "material": "Lata de Alumínio",
       "quantidade_kg": 100,
-      "preco_por_kg": 5.00,
-      "frete": 50.00,
-      "valor_total": 550.00,
+      "preco_por_kg": 5,
+      "frete": 50,
+      "valor_total": 550,
       "metodo_pagamento": "PIX",
       "cpf_cnpj_comprador": "123.456.789-00",
       "chave_pix_vendedor": "vendas@ecorecicla.com",
@@ -73,17 +85,17 @@
   ],
   "transacoes": [
     {
-      "id": 1,
+      "id": "1",
       "usuarioId": 1,
       "materialId": 1,
       "quantidade": 25,
-      "total": 230.00,
+      "total": 230,
       "status": "pendente"
     }
   ],
   "comentariosAvaliacoes": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Julia Leite",
       "email": "julia.leite@email.com",
       "tipo_usuario": "Gerador de resíduo",
@@ -95,21 +107,21 @@
   ],
   "categoriasAvaliacao": [
     {
-      "id": 1,
+      "id": "1",
       "descricao": "Serviço"
     },
     {
-      "id": 2,
+      "id": "2",
       "descricao": "Plataforma"
     },
     {
-      "id": 3,
+      "id": "3",
       "descricao": "Atendimento"
     }
   ],
   "relatorios": [
     {
-      "id": 1,
+      "id": "1",
       "tipo": "resumo",
       "titulo": "Relatórios Gerenciais - Resumo",
       "dados": {
@@ -118,7 +130,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "tipo": "planilha",
       "titulo": "Relatório de Coletas",
       "descricao": "Relatório mensal das coletas realizadas.",
@@ -128,14 +140,14 @@
   ],
   "graficos": [
     {
-      "id": 1,
+      "id": "1",
       "titulo": "Gráficos",
       "tipo": "Coletas Gerais"
     }
   ],
   "pedidos": [
     {
-      "id": 1,
+      "id": "1",
       "quantidade": 0,
       "material": "NADA",
       "endereco": "Lugar Nenhum",
@@ -147,12 +159,12 @@
   ],
   "materiaisDisponiveis": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "plástico",
       "pesoDisponivel": 2000
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "papel",
       "pesoDisponivel": 1500
     }
