@@ -47,14 +47,6 @@
       "preco": 6,
       "peso": 30,
       "localidade": "Ponto de Coleta Eletronica"
-    },
-    {
-      "id": "2aec",
-      "nome": "aa",
-      "tipo": "Plástico",
-      "preco": 2,
-      "peso": 2,
-      "localidade": "aa"
     }
   ],
   "empresas": [
